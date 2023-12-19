@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercice 11</title>
+  </head>
+  <body>
+    <script>
+      let a = parseFloat(prompt("Entrez la valeure de a"));
+      console.log(a);
+      let operateur = prompt("Entrez l'opérateure:+ ou - ou * ou / ");
+      let b = parseFloat(prompt("Entrez la valeure de b"));
+      console.log(b);
+
+      function calculer(a, operateur, b) {
+        switch (operateur) {
+          case "+":
+            return a + b;
+          case "-":
+            return a - b;
+          case "*":
+            return a * b;
+          case "/":
+            if (b !== 0) {
+              return a / b;
+            } else {
+              return "Division par zéro impossible";
+            }
+          default:
+            return "Opérateur invalide";
+        }
+      }
+      let resultat = calculer(a, operateur, b);
+
+      // Affichage du résultat
+      console.log("Résultat : " + resultat);
+    </script>
+  </body>
+</html>

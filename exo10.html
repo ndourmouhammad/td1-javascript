@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 10</title>
+</head>
+
+<body>
+    <script>
+        let A = parseInt(prompt('Entrz la valeur de A '));
+        let B = parseInt(prompt('Entrz la valeur de B '));
+        let C = parseInt(prompt('Entrz la valeur de C '));
+
+        let temp;
+
+        if (A > B) {
+            // Échange de A et B
+            let temp = A;
+            A = B;
+            B = temp;
+        }
+
+        if (B > C) {
+            // Échange de B et C
+            let temp = B;
+            B = C;
+            C = temp;
+        }
+
+        if (A > B) {
+            // Échange de A et B (une dernière fois si nécessaire)
+            let temp = A;
+            A = B;
+            B = temp;
+        }
+
+        console.log(A, B, C);
+    </script>
+</body>
+
+</html>

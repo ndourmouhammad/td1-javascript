@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercice 13</title>
+  </head>
+  <body>
+    <script>
+        let jour = parseInt(prompt("Entrez le jour"));
+        let mois = parseInt(prompt("Entrez le mois"));
+        let annee = parseInt(prompt("Entrez l'année"));
+      
+        function Bissextile(annee) {
+          return (annee % 4 === 0 && annee % 100 !== 0) || annee % 400 === 0;
+        }
+      
+        function dateValide(jour, mois, annee) {
+          const jours = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+      
+          if (mois < 1 || mois > 12) {
+            return "Mois invalide";
+          }
+      
+          if (jour < 1 || jour > jours[mois - 1] + (mois === 2 && Bissextile(annee) ? 1 : 0)) {
+            return "Jour invalide";
+          }
+      
+          if (annee < 1 || annee > 2023) {
+            return "Année invalide";
+          }
+      
+          return "La date est : " + jour + "/" + mois + "/" + annee;
+        }
+      
+        let resultat = dateValide(jour, mois, annee);
+        console.log(resultat);
+      </script>
+      
+  </body>
+</html>

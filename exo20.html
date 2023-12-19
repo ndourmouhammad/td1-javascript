@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 20</title>
+</head>
+<body>
+    <script>
+        let nombre;
+        let GrandNombre;
+        let rang;
+        let i;
+
+        GrandNombre = 0;
+        for (i=1; i<=10; i++){
+            console.log('Entrer le nombre ',i)
+            nombre = parseInt(prompt())
+            console.log(nombre)
+            if (nombre > GrandNombre){
+                GrandNombre = nombre;
+                rang = i
+            }
+        }
+
+        console.log('Le plus grand nombre est : ', GrandNombre,'. Son rang dans la liste est : ', rang);
+    </script>
+</body>
+</html>

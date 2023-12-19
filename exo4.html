@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 4</title>
+</head>
+<body>
+    <script>
+        
+        // VERSION 1
+        let x = parseFloat(window.prompt('veuillez saisir un réel '));
+        let n = parseInt(window.prompt('veuillez entrer un entier '));
+        /*
+        let puissance = Math.pow(x,n)
+        console.log(`${x} à la puissance ${n} est ${puissance}`) */
+
+        // VERSION 2
+        let p = 1;
+        for (i = 1; i <= n; i++) {
+            p = p * x;
+            }
+        console.log('La puissance est : ', p);
+            
+    </script>
+</body>
+</html>

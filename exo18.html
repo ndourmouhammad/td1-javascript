@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exo18</title>
+</head>
+<body>
+    <script>
+        let a=parseInt(prompt("Entrez la valeure de A"))
+        let b=parseInt(prompt("Entrez la valeure de B"))
+            function calculerPGCD(a,b){
+            while(a!==b){
+                if(a>b){
+                    a-=b;
+                    return a
+                }
+                else{
+                    b-=a;
+                    return b
+                }
+            }
+            }
+       let resultat= calculerPGCD(a,b);
+
+       let ppcm=(a*b)/resultat
+       console.log("Le PPCM de ",a," et de ",b,"est: ",ppcm);
+    </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 3</title>
+</head>
+<body>
+
+    
+    <script>
+         // VERSION 1
+        /* let r1 = parseInt (window.prompt('Veuillez saisir r1 '));
+        let r2 = parseInt (window.prompt('Veuillez saisir r2 '));
+        let r3 = parseInt (window.prompt('Veuillez saisir r3 '));
+
+        
+        let rs  =  r1 + r2 + r3;
+        let rp = (r1 * r2 * r3) / (r1*r2 + r2*r3 + r1*r3);
+
+        console.log('La résistance en série est : ', rs);
+        console.log('La résistance en parallèle est : ', rp); */
+
+        // VERSION 2
+
+        // Demander à l'utilisateur d'entrer les trois valeurs
+        let r1;
+        let r2;
+        let r3;
+        
+        while(true){
+            r1 = parseFloat (window.prompt('Veuillez saisir r1 '));
+            r2 = parseFloat (window.prompt('Veuillez saisir r2 '));
+            r3 = parseFloat (window.prompt('Veuillez saisir r3 '));
+            if (isNaN(r1) || isNaN(r2) || isNaN(r3)){
+                console.log(`Une des résistances n'est pas valide. Entrer des nombres`);
+            }
+            else{
+                break;
+            }
+        }
+
+        // Demander à l'utilisateur de faire son choix
+        console.log('1 - Fréquence en série ');
+        console.log('2 - Fréquence en parallèle ');
+        let choix = parseInt(window.prompt('Veuillez choisir un numéro'));
+        if (choix === 1) {
+            let rs  =  r1 + r2 + r3;
+            console.log('La résistance en série est : ', rs);
+        }
+        else if (choix === 2) {
+            let rp = (r1 * r2 * r3) / (r1*r2 + r2*r3 + r1*r3);
+            console.log('La résistance en parallèle est : ', rp);
+        }
+        else {
+            console.log('Numero indisponibe');
+        }
+        
+    </script>
+</body>
+</html>

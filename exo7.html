@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 7</title>
+</head>
+<body>
+    <script>
+        let billet_20 = 0;
+        let billet_10 = 0;
+        let billet_5 = 0;
+        let piece_2 = 0;
+        let piece_1 = 0;
+
+        let montant = parseInt(prompt('Veuillz entrer le montant : '));
+
+        billet_20 = Math.trunc(montant / 20 );  
+        montant = montant % 20;
+        billet_10 = Math.trunc(montant / 10 );
+        montant = montant % 10;
+        billet_5 = Math.trunc(montant / 5 );
+        montant = montant % 5;
+        piece_2 = Math.trunc(montant / 2 )
+        montant = montant % 2;
+        piece_1 = montant;
+
+        console.log("Billets de 20 euros : ", billet_20);
+        console.log("Billets de 10 euros : ", billet_10);
+        console.log("Billets de 5 euros : ", billet_5);
+        console.log("Pièces de 2 euros : ", piece_2);
+        console.log("Pièces de 1 euro : ", piece_1);
+    </script>
+</body>
+</html>

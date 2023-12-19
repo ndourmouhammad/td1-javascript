@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exo16</title>
+</head>
+<body>
+    <script>
+        let a = parseInt(prompt("Entrez la valeur de a :"));
+        let b = parseInt(prompt("Entrez la valeur de b :"));
+        function soustractionsuccesive(a,b){
+                if(b==0){
+                    return "division par zero impossible"
+                    }
+                    let quotient=0
+                        while(a>=b){
+                            a-=b;
+                          quotient++;  
+                        }
+        return "le quotient de la division est: "+quotient+" et le reste est: "+a
+        }
+        let resultat =soustractionsuccesive(a,b);
+        console.log(resultat);
+
+    </script>
+</body>
+</html>

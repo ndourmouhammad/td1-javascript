@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 8</title>
+</head>
+<body>
+    <script>
+        let a = parseInt(prompt('Veuillez saisir la valeur de a '));
+        let b = parseInt(prompt('Veuillez saisir la valeur de b '));
+        let c = parseInt(prompt('Veuillez saisir la valeur de c '));
+
+        let delta = (b**2) - (4 * a *c);
+        console.log('delta = ', delta);
+        if (delta < 0) {
+            console.log('Pas de Solution');
+        }else if (delta === 0){
+            let Xo = (-b) / (2 * a);
+            console.log('On a la solution double : Xo = ', Xo);
+        }else {
+            let X1 = ((-b-Math.sqrt(delta)) / (2 * a));
+            let X2 = ((-b+Math.sqrt(delta)) / (2 * a));
+            console.log('On a deux solutions : ');
+            console.log('X1 = ', X1, 'et X2 = ', X2);
+        }
+    </script>
+</body>
+</html>

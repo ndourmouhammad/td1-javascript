@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo 14</title>
+</head>
+<body>
+    <script>
+        let jour = parseInt(prompt("Entrez le jour"));
+        let mois = parseInt(prompt("Entrez le mois"));
+        let annee = parseInt(prompt("Entrez l'année"));
+
+        if ((annee % 4 === 0 && annee % 100 !== 0) || (annee % 400 === 0)){
+            console.log(`${annee} est bisextile`);
+        }else{
+            console.log(`${annee} n'est pas bisextile`);
+        }
+    </script>
+</body>
+</html>

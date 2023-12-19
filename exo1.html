@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 1</title>
+</head>
+<body>
+    <script>
+        let a = parseInt(prompt('Entrez la valeur de a :'));
+        let b;
+        while(true){
+            b = parseInt(prompt('Entrez la valeur de b, elle doit être différent de 0 :'));
+            if (b !== 0){
+                break;
+            }
+        }
+        let q = Math.trunc(a/b); // quotient entier
+        let r = a % b; // le reste
+        let ratio = a / b; // quotient réel
+
+        console.log('le quotient entier est : ', q);
+        console.log('le reste de la division est : ', r);
+        console.log('le quotient réel est : ', ratio);
+    </script>
+</body>
+</html>

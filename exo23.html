@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 23</title>
+</head>
+<body>
+    <script>
+
+        let mois;
+        let bebe_lapins;
+        let lapins_adulte;
+        let lapins_total;
+
+        bebe_lapins = 2;
+        lapins_adulte = 2;
+        lapins_total = 0;
+        mois = 2;
+
+        while(mois <= 12){
+            lapins_total = lapins_adulte + bebe_lapins;
+            bebe_lapins = lapins_adulte;
+            lapins_adulte = lapins_total;
+
+            mois++;
+        }
+
+        console.log(`Au bout d'un (mois 12), le nombre total de lapins est ${lapins_total}`);
+
+        bebe_lapins = 2;
+        lapins_adulte = 2;
+        lapins_total = 0;
+        mois = 2;
+
+        while(lapins_total <= 1000000000){
+            lapins_total = lapins_adulte + bebe_lapins;
+            bebe_lapins = lapins_adulte;
+            lapins_adulte = lapins_total;
+            mois++;
+        }
+
+        console.log(`On dépasse le milliard de lapins au bout de ${mois} mois.`);
+
+    </script>
+</body>
+</html>

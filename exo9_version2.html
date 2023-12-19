@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 9.2</title>
+</head>
+<body>
+    <script>
+        let heureDepart = parseInt(prompt("Veuillez saisir l'heure de départ "));
+        let minuteDepart = parseInt(prompt("Veuillez saisir les minutes de départ "));
+        let heureArrive = parseInt(prompt("Veuillez saisir l'heure d'arrivée "));
+        let minuteArrive = parseInt(prompt("Veuillez saisir minute d'arrivée "));
+
+        // convertir en minutes
+        let dureMinute = ((heureArrive * 60 + minuteArrive) - (heureDepart * 60 + minuteDepart) + 1440) % 1440;
+
+        let heure = Math.trunc(dureMinute / 60);
+        let minute = dureMinute % 60;
+
+        console.log("La durée de vol est de ", heure, " heures et ", minute, " minutes.");
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 24</title>
+</head>
+<body>
+    <script>
+        let nombreSecret;
+        let nbre_essai;
+        let score;
+
+        // Demander au premier de saisir le nombre mystère
+        nombreSecret = parseInt(prompt('Joueur 1 : Veuillez saisir le nombre mystère '));
+        score = 0;
+
+        while(true){
+            // Demander au joueur d'essayer déviner
+            nbre_essai = parseInt(prompt('Joueur 2 : veuillez déviner le nombre'));
+            score++;
+            if (nbre_essai === nombreSecret ){
+                console.log('Félicitations vous avez trouvé le nombre mystère et votre score est : ', score);
+                break;
+            }else if (nbre_essai < nombreSecret){
+                console.log('Essayer avec un nombre plus grand');
+            } else{
+                console.log('Essayer avec un nombre plus petit');
+            }
+        }
+    </script>
+</body>
+</html>
